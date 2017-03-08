@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Lato|Rubik" rel="stylesheet">
+ <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+<style>
+.start{
+	margin-top:0px;
+	color: rgb(50, 50, 50);
+}
+body{
+	background: rgb(50, 50, 50);
+	text-shadow: 0 1px 3px rgba(0,0,0,.2);
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color:white;
+}
+p{
+	text-align:center;
+}
+hr{
+	margin-top: 30px;
+	background-color: rgb(35, 89, 175);
+	border: 0;
+	max-height: 10px;
+    max-width: 180px;
+}
+label{
+	display:block;
+	text-align:left;
+    font-weight: 700;
+	margin-top:10px;
+	font: normal 24px 'Rubik' !important;
+}
+.sbmssns{
+	display:inline-block;
+	width:780px;
+}
+.menuBar {
+	font-family: 'Rubik', sans-serif;
+	font-weight: bold;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background: rgba(35, 35, 35, .4);
+	height: 100%;
+	width: 140px;
+}
+.links{
+	right:5px;
+	top:5px;
+	position: fixed;
+}
+.octoCat{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	display:inline-block;
+	background-image: url('GitHub-Mark-Light-64px.png');
+	height:64px;
+	width:64px;
+	margin-right:5px;
+}
+.octoCat:hover{
+	background-image: url('GitHub-Mark-64px.png');
+	border-radius:50px;
+	box-shadow: 0 0 5px white;
+}
+.linkedIn{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	display:inline-block;
+	background-image: url('linkedin-3-512.png');
+	background-size: 64px 64px;
+	height:64px;
+	width:64px;
+	margin-right:5px;
+}
+.linkedIn:hover{
+	background-image: url('linkedin-3-512-Dark.png');
+	background-size: 64px 64px;
+	border-radius:10px;
+	box-shadow: 0 0 5px white;
+}
+.item:hover{
+	color: black;
+	background: rgba(255, 255, 255, .4);
+	border-left: 5px solid black;
+}
+a:hover, a:visited, a:link, a:active {
+	text-decoration: none;
+}
+.item {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	color: white;
+	transition:.5s;
+	position: relative;
+	text-align: right;
+	top: 10px;
+	padding: 10px 10px 10px 0;
+	border-left: 5px solid white;
+}
+.dscrptn{
+	width: 60%;
+	margin: 0 auto;
+	font-size: 36px;
+}
+.me{
+	display: block;
+	margin: 150px auto 0px auto;
+	border: 7px solid white;
+	width: 304px;
+	height: 304px;
+	border-radius: 50%;
+}
+.cntct{
+	margin: 300px auto 300px auto;
+	text-align: center;
+}
+.send{
+	//background:blue;
+	margin: 0 auto;
+	width: 1000px;
+}
+input{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	border-radius: 10px;
+	height:30px;
+	font-size:18px;
+}
+textarea{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	border-radius: 10px;
+	height:30px;
+	font-size:18px;
+}
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px skyblue;
+}
+.first{
+	float:left;
+}
+.last{
+	float:right;
+	margin-right:-6%;
+}
+input::-webkit-input-placeholder {
+	font-size: 18px;
+}
+input:-moz-placeholder {
+	font-size: 18px;
+}
+textarea::-webkit-textarea-placeholder {
+	font-size: 18px;
+}
+textarea:-moz-placeholder {
+	font-size: 18px;
+}
+.address{
+	float:left;
+	margin-right:-2.5%;
+}
+.message{
+	float:left;
+	margin-right:-2.5%;
+	height:90px;
+}
+.sendOff{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	margin-top:15px;
+	float:left;
+	border-style:none;
+	color: white;
+	background-color: rgb(35, 89, 175);
+	font-size:27px;
+	font-family: 'Rubik', sans-serif;
+	font-weight:bold;
+}
+input[type=button]:hover{
+	box-shadow: 0 0 5px white;
+	background-color: black;
+}
+@media (max-width: 400px){
+	.octoCat{
+		width:32px;
+		height:32px;
+		background-size:32px;
+	}
+	hr{
+		max-width:100px;
+	}
+	.linkedIn{
+		width:32px;
+		height:32px;
+		background-size:32px;
+	}
+	.me{
+		margin-top:40px;
+		height:152px;
+		width:152px;
+	}
+	.dscrptn{
+		font-size:18px;
+	}
+	.menuBar{
+		width:20%
+	}
+	.send{
+		//background:blue;
+		margin: 0 auto;
+		width: 250px;
+	}
+	.sbmssns{
+		display:inline-block;
+		width:250px;
+	}
+	label{
+		margin-left:15px;
+	}
+	.first{
+		margin-left:15px;
+		float:left;
+		width:10ch;
+	}
+	.last{
+		float:right;
+		margin-right:-6%;
+		width:10ch;
+	}
+	.address{
+		float:left;
+		margin-right:-2.5%;
+		width:23ch;
+		margin-left:15px;
+	}
+	.message{
+		float:left;
+		margin-right:-2.5%;
+		margin-left:15px;
+		height:90px;
+		width:24ch;
+	}
+	.sendOff{
+		margin-left:15px;
+	}
+	input::-webkit-input-placeholder {
+		font-size: 16px;
+	}
+	input:-moz-placeholder {
+		font-size: 16px;
+	}
+	textarea::-webkit-textarea-placeholder {
+		font-size: 16px;
+	}
+	textarea:-moz-placeholder {
+		font-size: 16px;
+	}
+}
+</style>
+</head>
+<body>
+<div class="links">
+	<a href="https://github.com/grawlixes"><div class="octoCat"></div></a>
+	<a href="https://www.linkedin.com/in/kyle-franke/"><div class="linkedIn"></div></a>
+</div>
+<div class="menuBar">
+	<a href="#me"><div class="item">Kyle Franke</div></a>
+	<!--<a href="#prjct"><div class="item">Projects</div></a> -->
+	<a href="#cntct"><div class="item">Contact Me</div></a>
+</div>
+<div class="start"><a name="me">lol</a></div>
+<div class="dscrptn">
+	<img class="me" src="yoursTruly.jpg"></img>
+	<hr size="7">
+	<p>I am a student at Binghamton University, pursuing a B.S. in Computer Science and a B.A. in Mathematical Sciences. I am also looking for a software engineering/development internship over the summer seasons of 2017 and 2018. <br> My <a href="resume.pdf" style="font-weight:bold;color:white;text-decoration:underline;">resumé</a> can be found here.</p>
+</div>
+
+<div class="cntct">
+	<a name="cntct"></a>
+	<form method="post" name="contactMe" action:"sendEmail.py">
+	<h1>Contact Me</h1>
+	<hr size="7" style="margin-top: -10px;">
+	<div class="send">
+		<div class="sbmssns">
+			<label>First name</label>
+			<input type="text" class="first" name="first" placeholder="First name" size="34">
+			<input type="text" class="last" name="last" placeholder="Last name" size="34">
+		</div>
+		<div class="sbmssns">
+			<label>Email</label>
+			<input type="text" class="address" name="email" placeholder="Email Address" size="76">
+		</div>
+		<div class="sbmssns">
+			<label>Message</label>
+			<textarea rows="5" cols="76" class="message" name="message" placeholder="Message" form="usrform"></textarea>
+			<input class="sendOff" type="button" value="Submit">
+		</div>
+	</div>
+	</form>
+</div>
+
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+</body>
